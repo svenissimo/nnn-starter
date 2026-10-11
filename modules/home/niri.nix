@@ -74,6 +74,7 @@
       "Mod+E".action.spawn = "nautilus"; # file manager
 
       # Window management
+      "Mod+Grave".action.toggle-overview = {};
       "Mod+Q".action.close-window = {};
       "Mod+F".action.maximize-column = {};
       "Mod+Shift+F".action.fullscreen-window = {};
@@ -82,15 +83,23 @@
 
       # Focus
       "Mod+H".action.focus-column-left = {};
+      "Mod+Left".action.focus-column-left = {};
       "Mod+L".action.focus-column-right = {};
+      "Mod+Right".action.focus-column-right = {};
       "Mod+J".action.focus-window-down = {};
+      "Mod+Down".action.focus-window-down = {};
       "Mod+K".action.focus-window-up = {};
+      "Mod+Up".action.focus-window-up = {};
 
       # Move
       "Mod+Shift+H".action.move-column-left = {};
+      "Mod+Shift+Left".action.move-column-left = {};
       "Mod+Shift+L".action.move-column-right = {};
+      "Mod+Shift+Right".action.move-column-right = {};
       "Mod+Shift+J".action.move-window-down = {};
+      "Mod+Shift+Down".action.move-window-down = {};
       "Mod+Shift+K".action.move-window-up = {};
+      "Mod+Shift+Up".action.move-window-up = {};
 
       # Sizing
       "Mod+R".action.switch-preset-column-width = {};
@@ -98,6 +107,7 @@
       "Mod+Equal".action.set-column-width = "+10%";
 
       # Workspaces
+      "Mod+Tab".action.focus-workspace-previous = {};
       "Mod+1".action.focus-workspace = 1;
       "Mod+2".action.focus-workspace = 2;
       "Mod+3".action.focus-workspace = 3;
