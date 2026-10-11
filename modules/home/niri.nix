@@ -7,8 +7,8 @@
 
     input = {
       keyboard.xkb = {
-        layout = "us,ru";
-        options = "grp:alt_shift_toggle"; # Alt+Shift switches US <-> Russian
+        layout = "gb";
+        #options = "grp:alt_shift_toggle"; # Alt+Shift switches US <-> Russian
       };
       # Each window remembers its own layout ("global" = one shared layout).
       keyboard.track-layout = "window";
