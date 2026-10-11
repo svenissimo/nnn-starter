@@ -19,7 +19,7 @@
       };
       mouse = {
         accel-profile = "flat";
-        natural-scroll = true; # match macOS-style scrolling (also set on touchpad)
+        natural-scroll = false; # match macOS-style scrolling (also set on touchpad)
       };
       focus-follows-mouse.enable = true;
     };
