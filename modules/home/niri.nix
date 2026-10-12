@@ -52,6 +52,24 @@
       border.enable = false;
     };
 
+    window-rules = [
+      {
+        matches = [
+          { app-id = "1password$"; }
+        ];
+        open-floating = true;
+        max-height = 700;
+      }
+      {
+        geometry-corner-radius = {
+          top-left = 12.0;
+          bottom-left = 12.0;
+          top-right=12.0;
+          bottom-right=12.0;
+        };
+          clip-to-geometry = true;
+      }
+    ];
     # noctalia is started as a systemd user service bound to the niri session
     # (see modules/home/noctalia.nix), so no spawn-at-startup needed.
 
@@ -88,9 +106,9 @@
       "Mod+L".action.focus-column-right = {};
       "Mod+Right".action.focus-column-right = {};
       "Mod+J".action.focus-window-down = {};
-      "Mod+Down".action.focus-window-down = {};
+      # "Mod+Down".action.focus-window-down = {};
       "Mod+K".action.focus-window-up = {};
-      "Mod+Up".action.focus-window-up = {};
+      # "Mod+Up".action.focus-window-up = {};
 
       # Move
       "Mod+Shift+H".action.move-column-left = {};
@@ -108,7 +126,9 @@
       "Mod+Equal".action.set-column-width = "+10%";
 
       # Workspaces
-      "Mod+Tab".action.focus-workspace-previous = {};
+      "Mod+Tab".action.focus-window-previous = {};
+      "Mod+Up".action.focus-workspace-up = {};
+      "Mod+Down".action.focus-workspace-down = {};
       "Mod+1".action.focus-workspace = 1;
       "Mod+2".action.focus-workspace = 2;
       "Mod+3".action.focus-workspace = 3;
