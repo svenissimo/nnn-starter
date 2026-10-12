@@ -15,14 +15,12 @@
     ./apps.nix
     ./media.nix
     ./discord.nix
+    ./1password.nix
   ];
 
   home.username = username;
   home.homeDirectory = "/home/${username}";
-  home.packages = [
-    pkgs._1password-cli
-    pkgs._1password-gui
-  ];
+
   # Match system.stateVersion in hosts/nnn/default.nix. Don't bump casually.
   home.stateVersion = "25.05";
 
