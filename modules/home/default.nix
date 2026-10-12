@@ -24,4 +24,8 @@
   home.stateVersion = "25.05";
 
   programs.home-manager.enable = true;
+
+  programs._1password.enable = true;
+  programs._1password-gui.enable = true;
+
 }
