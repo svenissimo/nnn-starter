@@ -16,6 +16,7 @@
     ./media.nix
     ./discord.nix
     ./1password.nix
+    ./ssh.nix
   ];
 
   home.username = username;
@@ -25,4 +26,6 @@
   home.stateVersion = "25.05";
 
   programs.home-manager.enable = true;
+
+
 }
