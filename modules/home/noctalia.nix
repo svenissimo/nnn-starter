@@ -18,6 +18,22 @@
     # Configure the shell interactively via its control center (Mod+Space →
     # settings) and, once you're happy, pin the values declaratively here under
     # `settings = { ... };` (schema at docs.noctalia.dev). Left at defaults so
+    settings = {
+      #bar.default.position = "bottom";
+      shell = {
+        ui_scale = 1.1;
+        font_family = "Maple Mono NF";
+      };
+      bar.default = {
+        background_opacity = 0.8;
+        scale = 1.1;
+      };
+
+      theme = {
+        source = "community";
+        community_palette = "Kanagawa Paper";
+      };
+    };
     # the build can't break on a settings key that doesn't exist yet.
   };
 }
