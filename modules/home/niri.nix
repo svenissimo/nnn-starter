@@ -108,8 +108,7 @@
       "Mod+Equal".action.set-column-width = "+10%";
 
       # Workspaces
-      "Mod+Tab".action.next-window = {};
-      "Mod+Shift+Tab".action.previous-window = {};
+      "Mod+Tab".action.focus-workspace-previous = {};
       "Mod+1".action.focus-workspace = 1;
       "Mod+2".action.focus-workspace = 2;
       "Mod+3".action.focus-workspace = 3;
