@@ -47,6 +47,7 @@
 
   # ── Everything else ───────────────────────────────────────────────────────
   home.packages = with pkgs; [
+    tree
     # navigation / files
     eza # alternative listing to lsd, handy for `eza --tree`
     yazi # TUI file manager
