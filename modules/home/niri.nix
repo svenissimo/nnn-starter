@@ -29,7 +29,7 @@
       scale = local.monitorScale;
     };
 
-    overview.backdrop-color = "#04213C";
+    overview.backdrop-color = "#56747C";
     #overview.zoom = 0.25;
     layout = {
       gaps = 12;
