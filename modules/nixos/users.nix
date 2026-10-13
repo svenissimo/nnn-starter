@@ -2,6 +2,7 @@
   pkgs,
   username,
   local,
+  environment,
   ...
 }: {
   # ⇩ username/description come from local.nix.
@@ -24,4 +25,13 @@
   # Passwordless sudo for the wheel group keeps `nixos-rebuild` snappy. Drop the
   # `wheelNeedsPassword = false` line if you'd rather be prompted.
   security.sudo.wheelNeedsPassword = false;
+
+  environment.etc = {
+    "1password/custom_allowed_browsers" = {
+      text = ''
+        zen
+      '';
+      mode = "0755";
+    };
+  };
 }
