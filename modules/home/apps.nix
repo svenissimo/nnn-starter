@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [inputs.zen-browser.homeModules.beta];
-
   # GUI desktop apps. Browsers and file managers live here rather than in the
   # CLI bundle.
   home.packages = [
@@ -12,6 +11,7 @@
     # service enabled in modules/nixos/desktop.nix for trash + mounting, and
     # backs the browser's "open/save" file picker via the gtk xdg portal.
     pkgs.nautilus
+    pkgs.hyprpicker
   ];
 
   # Zen browser — Firefox-based, from the community flake (beta channel).

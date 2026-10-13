@@ -23,6 +23,7 @@
       shell = {
         ui_scale = 1.1;
         font_family = "Maple Mono NF";
+        polkit_agent = true;
       };
       bar.default = {
         background_opacity = 0.8;
@@ -33,6 +34,9 @@
         source = "community";
         community_palette = "Kanagawa Paper";
       };
+
+      # plugins.enabled = ["oldirtty/color_picker"];
+      # plugins.autoupdate = "all";
     };
     # the build can't break on a settings key that doesn't exist yet.
   };

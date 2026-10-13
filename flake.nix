@@ -21,7 +21,10 @@
     # behind. Crucially we do NOT make it follow our nixpkgs — that would
     # rebuild it against a different nixpkgs and miss the cache.
     noctalia.url = "github:noctalia-dev/noctalia-shell/cachix";
-
+    noctalia-greeter = {
+      url = "github:noctalia-dev/noctalia-greeter";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # System-wide base16 theming.
     stylix = {
       url = "github:nix-community/stylix";
@@ -44,6 +47,7 @@
     home-manager,
     niri,
     noctalia,
+    noctalia-greeter,
     stylix,
     ...
   } @ inputs: let
@@ -74,6 +78,7 @@
         noctalia.nixosModules.default
         stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
+        noctalia-greeter.nixosModules.default
 
         ./hosts/nnn
         ./modules/nixos
