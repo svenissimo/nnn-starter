@@ -20,7 +20,6 @@
     ./media.nix
     ./discord.nix
     ./1password.nix
-    ./ssh.nix
   ];
 
   home.username = username;
