@@ -55,7 +55,7 @@
     window-rules = [
       {
         matches = [
-          { app-id = "1password$"; }
+          {app-id = "1password$";}
         ];
         open-floating = true;
         max-height = 700;
@@ -64,13 +64,19 @@
         geometry-corner-radius = {
           top-left = 12.0;
           bottom-left = 12.0;
-          top-right=12.0;
-          bottom-right=12.0;
+          top-right = 12.0;
+          bottom-right = 12.0;
         };
-          clip-to-geometry = true;
+        clip-to-geometry = true;
       }
-      { matches = [ {is-active = true; } ]; opacity = 1.0; }
-      { matches = [ {is-active = false; } ]; opacity = 0.9; }
+      {
+        matches = [{is-active = true;}];
+        opacity = 1.0;
+      }
+      {
+        matches = [{is-active = false;}];
+        opacity = 0.9;
+      }
     ];
     # noctalia is started as a systemd user service bound to the niri session
     # (see modules/home/noctalia.nix), so no spawn-at-startup needed.

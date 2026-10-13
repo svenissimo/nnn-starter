@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   # Enable niri from niri-flake. The module pulls in systemd units, polkit,
@@ -37,7 +38,6 @@
       user = "greeter";
     };
   };
-
   # Brightness keys are handled by brightnessctl (installed in desktop.nix),
   # which talks to logind and needs no extra privileges in a session.
 }
