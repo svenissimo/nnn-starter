@@ -1,7 +1,7 @@
-{local, lib,pkgs, ...}: {
+{local, lib, pkgs, ...}: {
   programs.git = {
     enable = true;
-   ;
+
     settings = {
       # ⇩ Identity comes from local.nix.
       user.name = local.gitUserName;

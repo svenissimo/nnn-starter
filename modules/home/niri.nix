@@ -69,6 +69,8 @@
         };
           clip-to-geometry = true;
       }
+      { matches = [ {is-active = true; } ]; opacity = 1.0; }
+      { matches = [ {is-active = false; } ]; opacity = 0.9; }
     ];
     # noctalia is started as a systemd user service bound to the niri session
     # (see modules/home/noctalia.nix), so no spawn-at-startup needed.
@@ -89,6 +91,13 @@
         "panel-toggle"
         "launcher"
       ];
+      # "Mod+Alt+Space".action.spawn = [
+      #   "noctalia"
+      #   "msg"
+      #   "panel-toggle"
+      #   "control-center"
+      # ];
+
       "Mod+B".action.spawn = "zen-beta"; # browser
       "Mod+E".action.spawn = "nautilus"; # file manager
 
