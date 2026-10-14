@@ -40,6 +40,8 @@
       # Its home-manager module reuses HM's firefox module, so share ours.
       inputs.home-manager.follows = "home-manager";
     };
+
+    omp.url = "github:can1357/oh-my-pi";
   };
 
   outputs = {
@@ -49,6 +51,7 @@
     noctalia,
     noctalia-greeter,
     stylix,
+    omp,
     ...
   } @ inputs: let
     # The platform the NNN machine runs on.

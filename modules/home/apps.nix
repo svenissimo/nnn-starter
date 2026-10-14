@@ -3,7 +3,10 @@
   inputs,
   ...
 }: {
-  imports = [inputs.zen-browser.homeModules.beta];
+  imports = [
+    inputs.zen-browser.homeModules.beta
+    inputs.omp.homeManagerModules.default
+  ];
   # GUI desktop apps. Browsers and file managers live here rather than in the
   # CLI bundle.
   home.packages = [
@@ -30,4 +33,8 @@
   # userContent.css into the named profile and flips on the
   # `toolkit.legacyUserProfileCustomizations.stylesheets` pref for us.
   stylix.targets.zen-browser.profileNames = ["default"];
+
+  programs.omp = {
+    enable = true;
+  };
 }
