@@ -109,7 +109,7 @@
       "Mod+E".action.spawn = "nautilus"; # file manager
 
       # Window management
-      "Mod+Grave".action.toggle-overview = {};
+      "Mod+Tab".action.toggle-overview = {};
       "Mod+Q".action.close-window = {};
       "Mod+F".action.maximize-column = {};
       "Mod+Shift+F".action.fullscreen-window = {};
@@ -142,7 +142,7 @@
       "Mod+Equal".action.set-column-width = "+10%";
 
       # Workspaces
-      "Mod+Tab".action.focus-window-previous = {};
+      "Mod+Shift+Tab".action.focus-window-previous = {};
       "Mod+Up".action.focus-workspace-up = {};
       "Mod+Down".action.focus-workspace-down = {};
       "Mod+1".action.focus-workspace = 1;
