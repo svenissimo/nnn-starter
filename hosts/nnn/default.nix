@@ -11,8 +11,8 @@
 
   services.xserver.xkb = {
     layout = "gb";
-    variant = "";
-    #options = "grp:alt_shift_toggle"; # Alt+Shift switches US <-> Russian
+    # variant = "mac";
+    options = "grp:alt_shift_toggle"; # Alt+Shift switches US <-> Russian
   };
   console.keyMap = "uk";
 
