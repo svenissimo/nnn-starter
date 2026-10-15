@@ -15,6 +15,7 @@
     # backs the browser's "open/save" file picker via the gtk xdg portal.
     pkgs.nautilus
     pkgs.hyprpicker
+    pkgs.localsend
   ];
 
   # Zen browser — Firefox-based, from the community flake (beta channel).

@@ -58,6 +58,7 @@
       {
         matches = [
           {app-id = "1password$";}
+          {app-id = "localsend_app$";}
         ];
         open-floating = true;
         max-height = 700;
