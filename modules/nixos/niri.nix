@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   # Enable niri from niri-flake. The module pulls in systemd units, polkit,
   # the screencast portal and sane session defaults.
   programs.niri.enable = true;

@@ -55,7 +55,8 @@
 
       plugins.enabled = [
         "oldirtty/color_picker"
-"luochen1990/niri-ribbon"
+        "luochen1990/niri-ribbon"
+        "fel/radio"
       ];
       # plugins.autoupdate = "all";
     };
