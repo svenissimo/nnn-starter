@@ -106,6 +106,12 @@
         "panel-toggle"
         "launcher"
       ];
+      # Open Noctalia's settings UI from the dedicated notification-center key.
+      "XF86NotificationCenter".action.spawn = [
+        "noctalia"
+        "msg"
+        "settings-toggle"
+      ];
 
       "Mod+B".action.spawn = "zen-beta"; # browser
       "Mod+E".action.spawn = "strata"; # file manager
