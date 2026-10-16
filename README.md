@@ -87,9 +87,16 @@ flake.nix              # inputs + the single `nixosConfigurations.nnn`
 local.nix              # your machine-local identity (skip-worktree)
 hosts/nnn/             # host: hardware + locale/timezone
 modules/nixos/         # system: boot, audio, niri, noctalia, stylix, users…
-modules/home/          # user: zsh, ghostty, neovim, niri keybinds, cli tools…
-themes/kanagawa.yaml   # vendored base16 palette (Stylix source of truth)
+modules/home/          # user: zsh, ghostty, wallpapers, and other home config…
+modules/home/default.nix # shared user defaults, including wallpaper links
+themes/                # vendored palette and the wallpaper used by Stylix and Home Manager
 ```
+
+## Wallpapers
+
+`walls` and `makccr-wallpapers` are shallow Git inputs pinned by `flake.lock`; Home Manager links their source trees into `~/Pictures/Wallpapers`. Shallow fetching omits Git history, not the large wallpaper files. `wallpaper.png` is linked from `themes/wallpaper.png`.
+
+Update these upstream snapshots through the normal flake lock update workflow. Home Manager manages the target paths, so the linked repository contents are read-only; edit the upstream inputs or configuration rather than files beneath those links.
 
 ## Key bindings (niri)
 

@@ -268,6 +268,24 @@
         "type": "github"
       }
     },
+    "makccr-wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788756593,
+        "narHash": "sha256-9xtDlKPE0BuQRJlCbf6zX8lS91t4JfA2ATSep99rWAE=",
+        "ref": "master",
+        "rev": "3f10f990939bc51b174936e2e92a20fc247e5b25",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/makccr/wallpapers"
+      },
+      "original": {
+        "ref": "master",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/makccr/wallpapers"
+      }
+    },
     "niri": {
       "inputs": {
         "niri-stable": "niri-stable",
@@ -544,6 +562,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "makccr-wallpapers": "makccr-wallpapers",
         "niri": "niri",
         "nixpkgs": "nixpkgs_2",
         "noctalia": "noctalia",
@@ -551,6 +570,7 @@
         "omp": "omp",
         "strata": "strata",
         "stylix": "stylix",
+        "walls": "walls",
         "zen-browser": "zen-browser"
       }
     },
@@ -793,6 +813,24 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "type": "github"
+      }
+    },
+    "walls": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1709702900,
+        "narHash": "sha256-M96jJy3L0a+VkJ+DcbtrRAquwDWaIG9hAUxenr/TcQU=",
+        "ref": "main",
+        "rev": "6bf4d733ebf2b484a37c17d742eb47e5139e6a14",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/dharmx/walls.git"
+      },
+      "original": {
+        "ref": "main",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/dharmx/walls.git"
       }
     },
     "xwayland-satellite-stable": {

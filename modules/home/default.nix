@@ -1,5 +1,6 @@
 {
   username,
+  inputs,
   pkgs,
   ...
 }: {
@@ -24,6 +25,11 @@
 
   home.username = username;
   home.homeDirectory = "/home/${username}";
+  home.file = {
+    "Pictures/Wallpapers/walls".source = inputs.walls;
+    "Pictures/Wallpapers/wallpapers".source = inputs.makccr-wallpapers;
+    "Pictures/Wallpapers/wallpaper.png".source = ../../themes/wallpaper.png;
+  };
 
   # Match system.stateVersion in hosts/nnn/default.nix. Don't bump casually.
   home.stateVersion = "25.05";

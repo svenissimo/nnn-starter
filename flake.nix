@@ -44,6 +44,16 @@
     # upstream package set intact rather than forcing it onto our nixpkgs.
     strata.url = "github:deepwatrcreatur/nix-strata-filemanager";
 
+    # Large wallpaper collections; shallow fetches avoid downloading full Git history.
+    walls = {
+      url = "git+https://github.com/dharmx/walls.git?ref=main&shallow=1";
+      flake = false;
+    };
+    makccr-wallpapers = {
+      url = "git+https://github.com/makccr/wallpapers?ref=master&shallow=1";
+      flake = false;
+    };
+
     omp.url = "github:can1357/oh-my-pi";
   };
 
