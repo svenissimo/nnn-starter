@@ -14,7 +14,7 @@ run one command, and get a cohesive, themed, developer-ready Wayland desktop.
 
 | Layer        | Choice |
 |--------------|--------|
-| Compositor   | [niri](https://github.com/YaLTeR/niri) (scrollable-tiling Wayland) via [niri-flake](https://github.com/sodiboo/niri-flake) |
+| Compositor   | [niri](https://github.com/YaLTeR/niri) (scrollable-tiling Wayland), package from locked nixpkgs with [niri-flake](https://github.com/sodiboo/niri-flake) integration |
 | Shell/UI     | [Noctalia](https://github.com/noctalia-dev/noctalia-shell) **v5** (bar, launcher, notifications, lock, control center) |
 | Theming      | [Stylix](https://github.com/nix-community/stylix) with the **Kanagawa** palette; Noctalia uses its **Kanagawa Paper** community palette |
 | Terminal     | [Ghostty](https://ghostty.org) |
@@ -30,7 +30,7 @@ manage Strata preferences; each user can customize the app and choose their own
 default.
 
 | Font         | Maple Mono NF |
-| Login        | greetd + tuigreet → niri session |
+| Login        | Noctalia Greeter → niri session |
 
 ### Modern command-line toolset
 `lsd` · `fzf` · `bat` · `btop` · `ripgrep` · `fd` · `zoxide` · `eza` · `yazi` ·
@@ -173,9 +173,8 @@ and PR:
   reliable signal: catches option typos and niri schema errors).
 - **lint** — `alejandra --check`, `statix`, `deadnix`.
 - **build** — realises the full system closure; runs on `main` / manual
-  dispatch. niri and noctalia are pulled prebuilt from their cachix caches
-  (`niri.cachix.org`, `noctalia.cachix.org`), so it finishes in minutes instead
-  of compiling C++/Rust from source. Delete the job if you don't want it.
+  dispatch. Noctalia is pulled from its Cachix cache; Niri and system packages
+  use the nixpkgs binary cache when available.
 
 > **Commit a `flake.lock`.** Generate it once on a machine with Nix
 > (`nix flake lock`) and commit it, so CI and your machines resolve identical
@@ -189,16 +188,12 @@ and PR:
 - Multi-host: factor `hosts/` into one folder per machine and add more
   `nixosConfigurations` entries.
 
-### Binary caches (no source builds)
+### Binary caches
 
-niri and noctalia would otherwise compile from source (noctalia's C++ tree alone
-is ~an hour). To avoid that, the flake pins **noctalia to its `cachix` branch**
-— upstream force-pushes there only after a commit's package is built and pushed
-to `noctalia.cachix.org`, so `inputs.noctalia.packages.<sys>.default` is always a
-cache hit. It still tracks the **v5 line** (`main`), just slightly behind; the
-old series lives on `legacy-v4`. niri uses niri-flake's prebuilt
-`niri-stable` from `niri.cachix.org` for the same reason.
+Noctalia is pinned to its `cachix` branch; upstream pushes each commit after
+its package is available from `noctalia.cachix.org`. The Noctalia cache is
+trusted in [`modules/nixos/default.nix`](modules/nixos/default.nix).
 
-The two caches are trusted in [`modules/nixos/default.nix`](modules/nixos/default.nix)
-so your machine pulls binaries too. Neither input may `follows` our `nixpkgs` —
-that would rebuild them against a different nixpkgs and miss the cache.
+Niri uses `pkgs.niri` from the locked system nixpkgs, so its graphics libraries
+match the system Mesa/glibc set. The `niri-flake` input remains for its NixOS
+and Home Manager integration, not its package or binary cache.
