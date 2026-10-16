@@ -1,4 +1,5 @@
 {
+  lib,
   pkgs,
   inputs,
   ...
@@ -22,7 +23,7 @@
       #bar.default.position = "bottom";
       shell = {
         ui_scale = 1.1;
-        font_family = "Maple Mono NF";
+        font_family = lib.mkForce "Maple Mono NF";
         polkit_agent = true;
       };
       bar.default = {
@@ -31,12 +32,16 @@
       };
 
       theme = {
-        source = "community";
+        # Stylix's Noctalia target sets this to "custom"; keep the selected community palette.
+        source = lib.mkForce "community";
         community_palette = "Kanagawa Paper";
       };
       backdrop.enabled = true;
 
-      # plugins.enabled = ["oldirtty/color_picker"];
+      plugins.enabled = [
+        "oldirtty/color_picker"
+"luochen1990/niri-ribbon"
+      ];
       # plugins.autoupdate = "all";
     };
     # the build can't break on a settings key that doesn't exist yet.

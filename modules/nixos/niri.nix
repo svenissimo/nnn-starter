@@ -1,16 +1,15 @@
 {
   pkgs,
-  inputs,
   config,
   ...
 }: {
   # Enable niri from niri-flake. The module pulls in systemd units, polkit,
   # the screencast portal and sane session defaults.
   programs.niri.enable = true;
-  # Use niri-flake's own prebuilt package (built against its nixpkgs) so it
-  # comes from niri.cachix.org instead of compiling from source. This is the
-  # exact build the niri-flake settings schema targets.
-  programs.niri.package = inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.niri-stable;
+  # Use the Nixpkgs Niri package built with the same locked package set as the
+  # system graphics drivers. The separately locked niri-flake package uses an
+  # older glibc than this system's Mesa and fails to load its DRM backend.
+  programs.niri.package = pkgs.niri;
 
   # Wayland portals: gnome backend for screencasting, gtk for file pickers.
   xdg.portal = {

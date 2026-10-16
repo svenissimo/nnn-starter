@@ -16,7 +16,7 @@ run one command, and get a cohesive, themed, developer-ready Wayland desktop.
 |--------------|--------|
 | Compositor   | [niri](https://github.com/YaLTeR/niri) (scrollable-tiling Wayland) via [niri-flake](https://github.com/sodiboo/niri-flake) |
 | Shell/UI     | [Noctalia](https://github.com/noctalia-dev/noctalia-shell) **v5** (bar, launcher, notifications, lock, control center) |
-| Theming      | [Stylix](https://github.com/nix-community/stylix) with the **Kanagawa** palette — one scheme themes everything |
+| Theming      | [Stylix](https://github.com/nix-community/stylix) with the **Kanagawa** palette; Noctalia uses its **Kanagawa Paper** community palette |
 | Terminal     | [Ghostty](https://ghostty.org) |
 | Shell + prompt | Zsh + [Starship](https://starship.rs) (autosuggestions, syntax highlighting, fzf, zoxide) |
 | Editor (GUI) | [Zed](https://zed.dev) — themed via Stylix; default handler for text/source files |
