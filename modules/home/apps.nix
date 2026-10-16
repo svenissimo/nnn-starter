@@ -7,13 +7,8 @@
     inputs.zen-browser.homeModules.beta
     inputs.omp.homeManagerModules.default
   ];
-  # GUI desktop apps. Browsers and file managers live here rather than in the
-  # CLI bundle.
+  # Desktop utilities. Browsers and file managers are managed separately.
   home.packages = [
-    # Nautilus (GNOME Files): a sensible GTK file manager. Pairs with the gvfs
-    # service enabled in modules/nixos/desktop.nix for trash + mounting, and
-    # backs the browser's "open/save" file picker via the gtk xdg portal.
-    pkgs.nautilus
     pkgs.hyprpicker
     pkgs.localsend
   ];

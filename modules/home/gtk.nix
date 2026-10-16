@@ -1,8 +1,8 @@
 {pkgs, ...}: {
-  # Icon theme for Nautilus and every other GTK app. Stylix paints GTK *colors*
+  # Icon theme for Strata and every other GTK app. Stylix paints GTK *colors*
   # (adw-gtk3 + the Kanagawa base16 palette, see modules/nixos/stylix.nix) but
-  # deliberately leaves the icon theme alone — without this, Nautilus falls back
-  # to the bare hicolor/Adwaita defaults and looks plain.
+  # deliberately leaves the icon theme alone — without this, file managers
+  # fall back to the bare hicolor/Adwaita defaults and look plain.
   #
   # Papirus is the most complete Linux icon set (full folder + mime coverage).
   # Its default folder accent is already blue, which lines up with Kanagawa's

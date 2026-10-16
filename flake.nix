@@ -40,6 +40,9 @@
       # Its home-manager module reuses HM's firefox module, so share ours.
       inputs.home-manager.follows = "home-manager";
     };
+    # Strata file manager; its NixOS module installs it system-wide. Keep its
+    # upstream package set intact rather than forcing it onto our nixpkgs.
+    strata.url = "github:deepwatrcreatur/nix-strata-filemanager";
 
     omp.url = "github:can1357/oh-my-pi";
   };
@@ -80,6 +83,7 @@
         niri.nixosModules.niri
         noctalia.nixosModules.default
         stylix.nixosModules.stylix
+        inputs.strata.nixosModules.default
         home-manager.nixosModules.home-manager
         noctalia-greeter.nixosModules.default
 

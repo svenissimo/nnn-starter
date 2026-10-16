@@ -22,7 +22,13 @@ run one command, and get a cohesive, themed, developer-ready Wayland desktop.
 | Editor (GUI) | [Zed](https://zed.dev) — themed via Stylix; default handler for text/source files |
 | Editor (terminal) | Neovim, preconfigured (LSP, treesitter, telescope, completion); the `$EDITOR` |
 | Browser      | [Zen](https://zen-browser.app) (beta channel, via the community flake) |
-| File manager | [Nautilus](https://apps.gnome.org/Nautilus/) (GNOME Files) |
+| File manager | [Strata](https://github.com/deepwatrcreatur/nix-strata-filemanager) |
+
+Strata is installed through its upstream NixOS module, so it is available to all
+system users. The system does not force a default file-manager association or
+manage Strata preferences; each user can customize the app and choose their own
+default.
+
 | Font         | Maple Mono NF |
 | Login        | greetd + tuigreet → niri session |
 
@@ -92,7 +98,7 @@ themes/kanagawa.yaml   # vendored base16 palette (Stylix source of truth)
 | `Mod`+`Return` | Terminal (ghostty) |
 | `Mod`+`Space` | Noctalia launcher |
 | `Mod`+`B` | Browser (Zen) |
-| `Mod`+`E` | File manager (Nautilus) |
+| `Mod+E` | File manager (Strata) |
 | `Mod`+`Q` | Close window |
 | `Mod`+`Tab` | Toggle overview (with wallpaper backdrop) |
 | `Mod`+`F` / `Mod`+`Shift`+`F` | Maximize column / fullscreen |

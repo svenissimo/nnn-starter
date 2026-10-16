@@ -16,6 +16,12 @@
   services.upower.enable = true;
   programs.gnome-disks.enable = true;
   services.gvfs.enable = true; # trash + mounting for file managers.
+  # Install Strata for every system user without forcing a system-wide MIME
+  # association; users can choose their own default file manager.
+  programs.strata = {
+    enable = true;
+    defaultFileManager = false;
+  };
 
   # A handful of GUI essentials live at the system level so they're always
   # present regardless of which user logs in.

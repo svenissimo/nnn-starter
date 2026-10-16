@@ -106,21 +106,19 @@
         "panel-toggle"
         "launcher"
       ];
-      # "Mod+Alt+Space".action.spawn = [
-      #   "noctalia"
-      #   "msg"
-      #   "panel-toggle"
-      #   "control-center"
-      # ];
 
       "Mod+B".action.spawn = "zen-beta"; # browser
-      "Mod+E".action.spawn = "nautilus"; # file manager
+      "Mod+E".action.spawn = "strata"; # file manager
 
       # Window management
       "Mod+Tab".action.toggle-overview = {};
       "Mod+Q".action.close-window = {};
       "Mod+F".action.maximize-column = {};
-      "Mod+Shift+F".action.fullscreen-window = {};
+      # "Mod+Shift+F".action.fullscreen-window = {};
+      "Mod+Shift+F".action.spawn-sh = ''
+        niri msg action move-column-to-workspace 255 &&
+        niri msg action maximize-column
+      '';
       "Mod+W".action.toggle-column-tabbed-display = {};
       "Mod+V".action.toggle-window-floating = {};
 
