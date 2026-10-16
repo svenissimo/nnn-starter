@@ -30,6 +30,20 @@
         background_opacity = 0.8;
         scale = 1.1;
       };
+      bar.niri-ribbon = {
+        enabled = true;
+        position = "bottom";
+        background_opacity = 0.0;
+        compositor_blur = false;
+        reserve_space = false;
+        start = [];
+        center = ["niri-ribbon"];
+        end = [];
+      };
+      widget.niri-ribbon = {
+        type = "luochen1990/niri-ribbon:ribbon";
+        capsule = true;
+      };
 
       theme = {
         # Stylix's Noctalia target sets this to "custom"; keep the selected community palette.
