@@ -94,7 +94,7 @@ themes/kanagawa.yaml   # vendored base16 palette (Stylix source of truth)
 | `Mod`+`B` | Browser (Zen) |
 | `Mod`+`E` | File manager (Nautilus) |
 | `Mod`+`Q` | Close window |
-| `Mod`+`Tab` | Toggle overview |
+| `Mod`+`Tab` | Toggle overview (with wallpaper backdrop) |
 | `Mod`+`F` / `Mod`+`Shift`+`F` | Maximize column / fullscreen |
 | `Mod`+`H`/`J`/`K`/`L` | Focus left/down/up/right |
 | `Mod`+`Shift`+`H`/`J`/`K`/`L` | Move window |

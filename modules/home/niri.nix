@@ -30,8 +30,14 @@
       scale = local.monitorScale;
     };
 
-    overview.backdrop-color = "#56747C";
+    # overview.backdrop-color = "#56747C";
     #overview.zoom = 0.25;
+    layer-rules = [
+      {
+        matches = [{namespace = "^noctalia-backdrop";}];
+        place-within-backdrop = true;
+      }
+    ];
     layout = {
       gaps = 12;
       center-focused-column = "never";

@@ -34,6 +34,7 @@
         source = "community";
         community_palette = "Kanagawa Paper";
       };
+      backdrop.enabled = true;
 
       # plugins.enabled = ["oldirtty/color_picker"];
       # plugins.autoupdate = "all";
