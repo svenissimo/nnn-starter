@@ -52,7 +52,7 @@
     eza # alternative listing to lsd, handy for `eza --tree`
     yazi # TUI file manager
 
-    # system / inspection
+    lazydocker # terminal UI for Docker and Docker Compose
     dust # disk usage (du replacement)
     duf # disk free (df replacement)
     procs # process viewer (ps replacement)
