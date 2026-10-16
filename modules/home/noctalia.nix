@@ -43,6 +43,7 @@
       widget.niri-ribbon = {
         type = "luochen1990/niri-ribbon:ribbon";
         capsule = true;
+        capsule_padding = 10.0;
       };
 
       theme = {
