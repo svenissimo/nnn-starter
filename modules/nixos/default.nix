@@ -12,6 +12,7 @@
     ./stylix.nix
     ./users.nix
     ./docker.nix # optional: comment out if you don't want containers
+    ./libvirt.nix
   ];
 
   # Flakes + the modern nix CLI.
