@@ -18,6 +18,8 @@
     ./direnv.nix
     ./claude-code.nix
     ./apps.nix
+    # Optional: comment out if PICO-8 is not installed at ~/pico-8 or you don't want its launcher.
+    ./pico8.nix
     ./media.nix
     ./discord.nix
     ./1password.nix

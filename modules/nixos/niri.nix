@@ -6,6 +6,8 @@
   niri-flake.cache.enable = false;
   # Keep Niri and the system graphics drivers on the same locked package set.
   programs.niri.package = pkgs.niri;
+  # Niri uses xwayland-satellite for X11 apps and starts it on demand.
+  environment.systemPackages = [pkgs.xwayland-satellite];
 
   # Wayland portals: gnome backend for screencasting, gtk for file pickers.
   xdg.portal = {
